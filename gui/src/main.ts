@@ -26,6 +26,7 @@ let setState = ( state: ConnectionState ) => {
 
       indicatorText.innerHTML = 'Not Connected.';
       document.querySelector<HTMLElement>('.bottom-tip')!.style.display = 'block';
+      document.querySelector<HTMLElement>('#minimise-button')!.style.display = 'none';
       break;
     
     case ConnectionState.ERRORED:
@@ -35,6 +36,7 @@ let setState = ( state: ConnectionState ) => {
 
       indicatorText.innerHTML = 'Error.';
       document.querySelector<HTMLElement>('.bottom-tip')!.style.display = 'none';
+      document.querySelector<HTMLElement>('#minimise-button')!.style.display = 'block';
       break;
 
     case ConnectionState.SEARCHING:
@@ -42,6 +44,7 @@ let setState = ( state: ConnectionState ) => {
 
       indicatorText.innerHTML = 'Searching...';
       document.querySelector<HTMLElement>('.bottom-tip')!.style.display = 'none';
+      document.querySelector<HTMLElement>('#minimise-button')!.style.display = 'block';
       break;
 
     case ConnectionState.CONNECTED:
@@ -51,6 +54,7 @@ let setState = ( state: ConnectionState ) => {
 
       indicatorText.innerHTML = 'Connected.';
       document.querySelector<HTMLElement>('.bottom-tip')!.style.display = 'none';
+      document.querySelector<HTMLElement>('#minimise-button')!.style.display = 'block';
       break;
 
     case ConnectionState.INSTALLING:
@@ -60,6 +64,7 @@ let setState = ( state: ConnectionState ) => {
 
       indicatorText.innerHTML = 'Installing...';
       document.querySelector<HTMLElement>('.bottom-tip')!.style.display = 'none';
+      document.querySelector<HTMLElement>('#minimise-button')!.style.display = 'block';
       break;
   }
 }

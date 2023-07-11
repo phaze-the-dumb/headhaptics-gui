@@ -25,8 +25,8 @@ app.on('ready', () => {
     fullscreenable: false
   });
 
-  // mainWindow.loadFile(path.join(__dirname, './dist/index.html')); // PRODUCTION
-  mainWindow.loadURL('http://127.0.0.1:5173'); // DEVELOPMENT
+  mainWindow.loadFile(path.join(__dirname, './dist/index.html')); // PRODUCTION
+  // mainWindow.loadURL('http://127.0.0.1:5173'); // DEVELOPMENT
   mainWindow.setMenuBarVisibility(false);
 });
 
