@@ -152,7 +152,7 @@ let startMainThread = async () => {
       hapticStrength = msg[1];
 
     if(msg[0] === '/avatar/parameters/LContact'){
-      port.write('l.setDuty('+(msg[1] * hapticsStrength).toString()+')\r');
+      port.write('l.setDuty('+(msg[1] * hapticStrength).toString()+')\r');
       clearTimeout(resetTimeout);
 
       resetTimeout = setTimeout(() => {
@@ -161,7 +161,7 @@ let startMainThread = async () => {
     }
 
     if(msg[0] === '/avatar/parameters/RContact'){
-      port.write('r.setDuty('+(msg[1] * hapticsStrength).toString()+')\r');
+      port.write('r.setDuty('+(msg[1] * hapticStrength).toString()+')\r');
       clearTimeout(resetTimeout);
 
       resetTimeout = setTimeout(() => {

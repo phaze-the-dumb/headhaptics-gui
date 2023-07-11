@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "productName": "app",
+  "name": "headhaptics-gui",
+  "productName": "HeadHaptic GUI",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
