@@ -18,6 +18,7 @@
     transition: 0.5s;
     background: #001c46;
     box-shadow: #001c46 0 0 0;
+    width: calc(100% - 40px);
   }
 
   .button:hover{

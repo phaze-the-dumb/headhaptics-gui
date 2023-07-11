@@ -18,8 +18,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "crc": "^4.3.2",
     "electron-squirrel-startup": "^1.0.0",
-    "fastify": "^4.19.2"
+    "fastify": "^4.19.2",
+    "serialport": "^11.0.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.2.1",

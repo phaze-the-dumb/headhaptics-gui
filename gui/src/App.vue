@@ -17,7 +17,11 @@
   </div>
   <br />
 
-  <Button text="Detect Device" id="detect-devices-btn"></Button>
+  <div class="bottom-tip">Not seeing your device? Make sure it has the <span class="link" id="runtime-link">kaluma runtime</span> installed</div>
+
+  <div class="bottom-minimise">
+    <Button text="Minimise" id="minimise-button"></Button>
+  </div>
 
   <div class="waiting-for-backend">
     Waiting for backend...
@@ -61,5 +65,25 @@
     left: 5px;
     font-size: 12px;
     display: none;
+  }
+
+  .bottom-tip{
+    position: fixed;
+    bottom: 20px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .link{
+    cursor: pointer;
+    color: #00ccff;
+  }
+
+  .bottom-minimise{
+    position: fixed;
+    bottom: 0px;
+    font-size: 14px;
+    padding: 10px;
+    width: calc(100% - 20px);
   }
 </style>
