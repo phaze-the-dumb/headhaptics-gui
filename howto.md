@@ -1,6 +1,6 @@
 # How To Build ( WIP )
 
-~~yay, more documentation!!~~
+This documentation is very scuffed, I am very sorry, If you need more help building this dm me on discord `_phaz`.
 
 ## What you need
 
