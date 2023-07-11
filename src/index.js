@@ -4,6 +4,7 @@ const { SerialPort } = require('serialport');
 const ymodem = require('./util/ymodem');
 const fs = require('fs');
 const path = require('path');
+const osc = require('node-osc');
 
 if(require('electron-squirrel-startup'))
   app.quit();
@@ -13,6 +14,9 @@ let port = null;
 let lastSerialLength = 0;
 let expectedVersion = '0.1.0';
 let mainWindow;
+let hapticStrength = 0.75;
+
+let oscServer = new osc.Server(9001, '0.0.0.0');
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
@@ -137,6 +141,33 @@ let startMainThread = async () => {
     appState = 2;
     lastSerialLength--;
     console.error(e);
+  })
+
+  let resetTimeout = setTimeout(() => {
+    port.write('l.setDuty(0)\r');
+  }, 1000);
+
+  oscServer.on('message', msg => {
+    if(msg[0] === '/avatar/parameters/HapticsMultiplier')
+      hapticStrength = msg[1];
+
+    if(msg[0] === '/avatar/parameters/LContact'){
+      port.write('l.setDuty('+(msg[1] * hapticsStrength).toString()+')\r');
+      clearTimeout(resetTimeout);
+
+      resetTimeout = setTimeout(() => {
+        port.write('l.setDuty(0)\r');
+      }, 1000);
+    }
+
+    if(msg[0] === '/avatar/parameters/RContact'){
+      port.write('r.setDuty('+(msg[1] * hapticsStrength).toString()+')\r');
+      clearTimeout(resetTimeout);
+
+      resetTimeout = setTimeout(() => {
+        port.write('l.setDuty(0)\r');
+      }, 1000);
+    }
   })
 }
 
