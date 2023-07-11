@@ -1,6 +1,8 @@
 module.exports = {
   packagerConfig: {
     asar: true,
+    ignore: [ 'gui/*' ],
+    icon: 'src/icon'
   },
   rebuildConfig: {},
   makers: [
@@ -26,5 +28,5 @@ module.exports = {
       name: '@electron-forge/plugin-auto-unpack-natives',
       config: {},
     },
-  ],
+  ]
 };
