@@ -12,7 +12,7 @@ A little experiment of mine to get haptics onto a quest 2
 
 Required
 - £1.53 - 10x Haptic Motors
-- £7.20 - 1x Pi Pico WH
+- £7.20 - 1x Pi Pico WH (Or a Pi Pico H slightly cheaper but will need a usb cable to connect the board and your pc)
 - £0.29 - 1x Motor Driver Board (MX1508 - doesn't need to be *this* particular board, but it's the one i'm using)
 - £2.00 - A Breadboard
 - £0.50 - Breadboard Jumper Wires
