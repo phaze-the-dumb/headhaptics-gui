@@ -39,7 +39,7 @@ Solder jumper wires onto:
 
 <hr />
 
-Install [kaluma's uf2 file](https://kalumajs.org/download/) onto the pi pico, you can do this buy:
+Install [kaluma's uf2 file](https://kalumajs.org/download/) onto the pi pico, you can do this by:
 - Unplugging the pico from your pc
 - Holding down the button on it
 - Plugging it back into your pc
