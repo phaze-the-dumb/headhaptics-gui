@@ -12,7 +12,7 @@ if(require('electron-squirrel-startup'))
 let appState = 0; // 0 - Not Connected, 1 - Connected, 2 - Errored, 3 - Searching, 4 - Installing
 let port = null;
 let lastSerialLength = 0;
-let expectedVersion = '0.1.0';
+let expectedVersion = '0.1.1';
 let mainWindow;
 let hapticStrength = 0.75;
 
