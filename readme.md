@@ -1,3 +1,5 @@
+# THIS PROJECT IS DEAD, I'M WORKING ON A V2
+
 # Headset Mounted Haptics
 
 A little experiment of mine to get haptics onto a quest 2
